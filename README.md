@@ -82,3 +82,7 @@ Comparison operators: <, >, <=, >=, ==, != (e.g., 5 > 3 evaluates to true).
 Logical operators: &&, ||, ! (e.g., x > 0 && y < 10 combines two conditions).
 Assignment operators: =, +=, -=, *=, /= (e.g., x += 5 is equivalent to x = x + 5).
 ```
+
+### Closures
+
+closures are self-contained blocks of code that can capture and store references to any constants and variables from the context in which they're defined. This is known as "closing over" those values. Closures are powerful tools for writing concise, functional code. Closures don't have a formal name like a function. They're defined inline using curly braces {}. Closures can capture variables from their surrounding scope, allowing them to access and potentially modify those values even after the surrounding code has finished execution.
