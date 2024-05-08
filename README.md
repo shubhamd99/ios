@@ -94,3 +94,7 @@ Enumerations, or enums, are user-defined data types that group related values to
 ## Protocols
 
 In Swift, protocols are interfaces that define a blueprint for properties, methods, and other requirements that a class, structure, or enumeration must adhere to. Protocols can be used to specify a property's type, whether it's gettable or settable, and more. They can be declared after the names of the class, structure, or enumeration types.
+
+## Extensions
+
+In Swift, extensions allow developers to add new functionality to existing classes, structs, enumerations, or protocols without modifying their original implementation. This includes the ability to extend types for which the original source code is not accessible, a concept known as retroactive modeling.
