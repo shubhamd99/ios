@@ -90,3 +90,7 @@ closures are self-contained blocks of code that can capture and store references
 ### Enumerations
 
 Enumerations, or enums, are user-defined data types that group related values together. They can be used to represent different cases or states in code, and can be as simple as a list of related constants or as complex as containing associated values and methods.
+
+## Protocols
+
+In Swift, protocols are interfaces that define a blueprint for properties, methods, and other requirements that a class, structure, or enumeration must adhere to. Protocols can be used to specify a property's type, whether it's gettable or settable, and more. They can be declared after the names of the class, structure, or enumeration types.

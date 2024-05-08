@@ -1,5 +1,7 @@
 import Foundation
 
+// Structures are value type and cannot be passed as reference type
+
 struct Person {
     let name: String
     let age: Int
