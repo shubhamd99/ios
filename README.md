@@ -86,3 +86,7 @@ Assignment operators: =, +=, -=, *=, /= (e.g., x += 5 is equivalent to x = x + 5
 ### Closures
 
 closures are self-contained blocks of code that can capture and store references to any constants and variables from the context in which they're defined. This is known as "closing over" those values. Closures are powerful tools for writing concise, functional code. Closures don't have a formal name like a function. They're defined inline using curly braces {}. Closures can capture variables from their surrounding scope, allowing them to access and potentially modify those values even after the surrounding code has finished execution.
+
+### Enumerations
+
+Enumerations, or enums, are user-defined data types that group related values together. They can be used to represent different cases or states in code, and can be as simple as a list of related constants or as complex as containing associated values and methods.
