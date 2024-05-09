@@ -17,6 +17,28 @@ The latest version of Swift is Swift 5.9.2
 
 ![img_url](https://i.imgur.com/lzv6wjQ.png)
 
+### Data Types in Swift
+
+* Character:  "s","a"	            - a 16-bit Unicode character
+* String:	  "hello world!"	    - represents textual data
+* Int:	      3, -23	            - an integer number
+* Float:	  2.4, 3.14, -23.21	    - represents 32-bit floating-point number
+* Double:	  2.422342412414	    - represents 64-bit floating-point number
+* Bool:	      true and false	    - Any of two values: true or false
+
+
+* Int8	8 bit	-128 to 127
+* Int16	16 bit	-215 to 215-1
+* Int32	32bit	-231 to 231-1
+* Int64	64bit	-263 to 263-1
+* UInt32	Depend on platform	0 to 232
+* UInt64	Depend on platform	0 to 264
+
+
+#### CGFloat
+
+The basic type for floating-point scalar values in Core Graphics and related frameworks.
+
 
 ### Variables
 
@@ -98,3 +120,46 @@ In Swift, protocols are interfaces that define a blueprint for properties, metho
 ## Extensions
 
 In Swift, extensions allow developers to add new functionality to existing classes, structs, enumerations, or protocols without modifying their original implementation. This includes the ability to extend types for which the original source code is not accessible, a concept known as retroactive modeling.
+
+## Generics
+
+Generics in Swift are a fundamental tool that allows developers to write reusable, flexible, and clean code. They enable developers to use different data types in the same functions and classes, while still providing strong type safety.
+
+## Swift UI vs UIKit
+
+SwiftUI and UIKit are both popular tools for building iOS user interfaces. SwiftUI is a newer, more declarative framework that's good for new projects, while UIKit is a more traditional, imperative framework that's better for maintaining legacy apps:
+
+### Swift UI
+
+SwiftUI is a more recent framework built by Apple, released in 2019 with version 13 of the iOS SDK. It’s particularly attractive for developers who want to create beautiful and responsive UIs in a declarative way. It’s built on top of the Swift programming language and is intended for building UIs for applications across Apple’s ecosystem, including iOS, macOS, tvOS, and watchOS.
+
+- Declarative syntax - With declarative syntax, you can describe the desired outcome of a UI rather than the specific steps for achieving it. The framework handles all the necessary actions and implementation details that your view requires, leaving you to only worry about its appearance.
+
+- State and data binding - State is a property wrapper used to store values that can change over time and whose changes need to be reflected in the UI. Data binding is a method for connecting two pieces of data so that changes to one are automatically reflected in the other.
+
+- Previews and live editing - You can see changes in your app’s UI in real-time as you write and modify code, thanks to SwiftUI’s previews and live editing features. You don’t have to run your app on an emulator or a device to see a live rendering of your UI code. This makes the development process faster and more efficient.
+
+- Simplified code and easier maintenance. Improved design-to-code workflow. Automatic support for dark mode and accessibility.
+
+- Limited compatibility with older iOS versions. Less mature framework with fewer UI components. 
+
+
+### UIKit
+
+UIkit was launched in 2008 to provide pre-built components for developers to handle inputs, touch events, and other user interactions on iOS apps. It was built with Objective-C, an improvement of the C programming language, that adds support for object-oriented programming.
+
+UIkit was initially designed to build a UI for the iPhone’s small touch-based screens, but it has evolved to support various devices over the years, including tvOS apps. UIkit has added numerous features over time, like auto layout, dynamic types, collection views, and drag-and-drop functionality, to make it a more powerful and user-friendly framework.
+
+Key components and design patterns: 
+
+- View controllers - As the name suggests, view controllers are objects used to manage UI views by responding to user input. They handle events such as button taps, gestures, and passing data to the views. They also act as an intermediary between the app’s data model and the views, as well as coordinating with other objects in the app.
+
+- Interface Builder and storyboards - Interface Builder is a visual editor embedded into Xcode (an IDE for Apple platforms) used to create and design user interfaces for iOS apps. Storyboards are visual representations of the app’s user interface, representing the screens, their order, and the transitions between them. 
+
+- Delegates and data sources - Delegates and data sources is a common design pattern in UIkit for iOS app development. It entails having a data source—an object responsible for providing the data displayed in a view—and a delegate—an object responsible for handling events or actions occurring in a view
+
+- A mature and stable framework. A wide range of UI components. Extensive documentation and community support.
+
+- Lack of built-in support for modern design patterns. Verbose code.
+
+![comparison](https://sendbird.sfo3.digitaloceanspaces.com/cms/Tutorial-image_Framework-comparison-for-ease-of-use.png)
