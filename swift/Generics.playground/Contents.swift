@@ -143,3 +143,12 @@ let button = MyButton()
 button.doSomethingWithButton()
 
 
+extension [Int] {
+    func average() -> Double {
+        Double(self.reduce(0, +)) / Double(self.count)
+    }
+}
+
+
+[4, 2].average() // 3
+[2, 5, 8].average() // 5
