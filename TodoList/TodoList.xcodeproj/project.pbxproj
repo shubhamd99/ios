@@ -179,10 +179,10 @@
 			children = (
 				09E6F2832BEFB5DB00979757 /* MainView.swift */,
 				095C459F2BEFC1CC004662C4 /* ProfileView.swift */,
-				095C45A12BEFC207004662C4 /* TodoListView.swift */,
 				095C45A32BEFC217004662C4 /* NewItemView.swift */,
 				095C45A52BEFC226004662C4 /* LoginView.swift */,
 				095C45A72BEFC23C004662C4 /* RegisterView.swift */,
+				095C45A12BEFC207004662C4 /* TodoListView.swift */,
 				095C45A92BEFC270004662C4 /* ToDoListItemView.swift */,
 				095C45BD2BEFC598004662C4 /* HeaderView.swift */,
 				095C45BF2BEFCB2F004662C4 /* TLButton.swift */,
@@ -195,10 +195,10 @@
 			children = (
 				095C45AF2BEFC3A0004662C4 /* MainViewViewModel.swift */,
 				095C45B12BEFC3B5004662C4 /* ProfileViewViewModel.swift */,
-				095C45B32BEFC3C4004662C4 /* TodoListViewViewModel.swift */,
 				095C45B52BEFC3D5004662C4 /* NewItemViewViewModel.swift */,
 				095C45B72BEFC3E6004662C4 /* LoginViewViewModel.swift */,
 				095C45B92BEFC3F3004662C4 /* RegisterViewViewModel.swift */,
+				095C45B32BEFC3C4004662C4 /* TodoListViewViewModel.swift */,
 				095C45BB2BEFC404004662C4 /* ToDoListItemViewModel.swift */,
 			);
 			path = ViewModels;
