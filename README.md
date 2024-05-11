@@ -163,3 +163,64 @@ Key components and design patterns:
 - Lack of built-in support for modern design patterns. Verbose code.
 
 ![comparison](https://sendbird.sfo3.digitaloceanspaces.com/cms/Tutorial-image_Framework-comparison-for-ease-of-use.png)
+
+
+## Async Swift
+
+To declare an asynchronous function in Swift, write the async keyword after the function name and before its return type. An asynchronous function can also throw errors like a normal function. It is marked with the async throws keywords in such cases.
+
+
+```swift
+import Foundation
+
+func fetchImageData() async throws -> Data {
+	let data = // ... Download the image data ...
+	return data
+}
+```
+
+```swift
+func fetchImageData() async throws -> Data {
+	let url = URL(string: "https://images.dog.ceo/breeds/mountain-swiss/n02107574_1387.jpg")!
+	let (data, _) = try await URLSession.shared.data(from: url)
+	return data
+}
+```
+
+The introduction of async await in Swift 5.5 replaced completion closures in asynchronous functions. Before Swift concurrency, callbacks were necessary to resume execution when asynchronous functions finished.
+
+```swift
+func fetchImageData(completion: @escaping (Result<Data, Error>)) {
+	let url = URL(string: "https://images.dog.ceo/breeds/mountain-swiss/n02107574_1387.jpg")!
+	let task = URLSession.shared.dataTask(with: url) { data, response, error in
+		if let error = error {
+			completion(.failure(error))
+			return
+		}
+		completion(.success(data))
+	}
+	task.resume()
+}
+```
+
+### Task
+
+A task in Swift is a unit of work that can be executed concurrently or asynchronously. It is a part of the Swift concurrency model.
+You can create a task by providing a closure that contains the work to perform. Tasks can start running immediately after creation.
+You can access the result from a throwing task using the value property. You can access the result or error from a throwing task using the result property.
+Tasks can be used to improve the performance of your app by allowing multiple tasks to run simultaneously. You can also use tasks to make your app more responsive by allowing long-running tasks to periodically pause and let other tasks proceed.
+
+```swift
+Task {
+    let result1 = await calculateFullName(
+        firstname: "Foo",
+        lastName: "Bar"
+    )
+    // Another way of writing
+    async let result2 = calculateFullName(
+        firstname: "Foo",
+        lastName: "Bar"
+    )
+    await result2
+}
+```
