@@ -296,3 +296,51 @@ struct PlayButton: View {
 A view for presenting a stack of views that represents a visible path in a navigation hierarchy. Use a NavigationView to create a navigation-based app in which the user can traverse a collection of views. 
 
 
+### @Published
+
+Publishing a property with the @Published attribute creates a publisher of this type
+
+```swift
+class Weather {
+    @Published var temperature: Double
+    init(temperature: Double) {
+        self.temperature = temperature
+    }
+}
+
+
+let weather = Weather(temperature: 20)
+cancellable = weather.$temperature
+    .sink() {
+        print ("Temperature now: \($0)")
+}
+weather.temperature = 25
+
+
+// Prints:
+// Temperature now: 20.0
+// Temperature now: 25.0
+```
+
+### Codable
+
+A type that can convert itself into and out of an external representation. Codable is a type alias for the Encodable and Decodable protocols. When you use Codable as a type or a generic constraint, it matches any type that conforms to both protocols.
+
+### What is ARC, retain and release?
+
+Before ARC, we had to manually manage memory and references. This caused a lot of bugs and headaches which many developers can probably tell. The reference count goes up when a new instance retains an object, while it goes down once a reference is released. Memory is freed up as soon as there’s no reference left to an object which means that the object is no longer needed.
+
+In Swift, we need to use weak self and unowned self to give ARC the required information between relationships in our code. Without using weak or unowned you’re basically telling ARC that a certain “strong reference” is needed and you’re preventing the reference count from going to zero. Without correctly using these keywords we possibly retain memory which can cause memory leaks in your app. So-called Strong Reference Cycles or Retain Cycles can occur as well if weak and unowned are not used correctly.
+
+Reference counting applies only to instances of classes. Structures and enumerations are value types, not reference types, and are not stored and passed by reference.
+
+### [weak self]
+
+weak references are always declared as optional variables as they can automatically be set to nil by ARC when its reference is deallocated. A retain cycle occurs as soon as a closure is retaining self and self is retaining the closure.
+
+
+### DispatchQueue
+
+An object that manages the execution of tasks serially or concurrently on your app's main thread or on a background thread. 
+
+Dispatch queues are FIFO queues to which your application can submit tasks in the form of block objects. Dispatch queues execute tasks either serially or concurrently. Work submitted to dispatch queues executes on a pool of threads managed by the system. Except for the dispatch queue representing your app's main thread, the system makes no guarantees about which thread it uses to execute a task.
