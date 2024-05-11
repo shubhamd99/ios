@@ -344,3 +344,7 @@ weak references are always declared as optional variables as they can automatica
 An object that manages the execution of tasks serially or concurrently on your app's main thread or on a background thread. 
 
 Dispatch queues are FIFO queues to which your application can submit tasks in the form of block objects. Dispatch queues execute tasks either serially or concurrently. Work submitted to dispatch queues executes on a pool of threads managed by the system. Except for the dispatch queue representing your app's main thread, the system makes no guarantees about which thread it uses to execute a task.
+
+### @ViewBuilder
+
+The @ViewBuilder attribute is one of the few result builders available for you to use in SwiftUI. You typically use it to create child views for a specific SwiftUI view in a readable way without having to use any return keywords.
