@@ -286,3 +286,7 @@ struct PlayButton: View {
     }
 }
 ```
+
+### NavigationView (Depricated) 
+
+A view for presenting a stack of views that represents a visible path in a navigation hierarchy. Use a NavigationView to create a navigation-based app in which the user can traverse a collection of views. 
