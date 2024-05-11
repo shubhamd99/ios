@@ -227,14 +227,18 @@ Task {
 
 ## Create a new app
 
-### Create a new project
-
 ![img_url](https://i.imgur.com/BqV0nZI.png)
 
 ![img_url](https://i.imgur.com/nE1iPLk.png)
 
 ![img_url](https://i.imgur.com/AZyOpZy.png)
 
+
+## Add package to project
+
+![img_url](https://i.imgur.com/r9KCvtf.png)
+
+![img_url](https://i.imgur.com/i4neFvt.png)
 
 ## Components
 
@@ -290,3 +294,5 @@ struct PlayButton: View {
 ### NavigationView (Depricated) 
 
 A view for presenting a stack of views that represents a visible path in a navigation hierarchy. Use a NavigationView to create a navigation-based app in which the user can traverse a collection of views. 
+
+
