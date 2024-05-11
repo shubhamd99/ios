@@ -234,3 +234,55 @@ Task {
 ![img_url](https://i.imgur.com/nE1iPLk.png)
 
 ![img_url](https://i.imgur.com/AZyOpZy.png)
+
+
+## Components
+
+### View
+
+A type that represents part of your app’s user interface and provides modifiers that you use to configure views. You create custom views by declaring types that conform to the View protocol. Implement the required body computed property to provide the content for your custom view.
+
+```swift
+struct MyView: View {
+    var body: some View {
+        Text("Hello, World!")
+    }
+}
+```
+
+### VStack
+A view that arranges its subviews in a vertical line.
+Unlike LazyVStack, which only renders the views when your app needs to display them, a VStack renders the views all at once, regardless of whether they are on- or offscreen. Use the regular VStack when you have a small number of subviews or don’t want the delayed rendering behavior of the “lazy” version.
+
+```swift
+var body: some View {
+    VStack(
+        alignment: .leading,
+        spacing: 10
+    ) {
+        ForEach(
+            1...10,
+            id: \.self
+        ) {
+            Text("Item \($0)")
+        }
+    }
+}
+```
+
+### @State
+
+A property wrapper type that can read and write a value managed by SwiftUI. Use state as the single source of truth for a given value type that you store in a view hierarchy. Create a state value in an App, Scene, or View by applying the @State attribute to a property declaration and providing an initial value. Declare state as private to prevent setting it in a memberwise initializer, which can conflict with the storage management that SwiftUI provides:
+
+```swift
+struct PlayButton: View {
+    @State private var isPlaying: Bool = false // Create the state.
+
+
+    var body: some View {
+        Button(isPlaying ? "Pause" : "Play") { // Read the state.
+            isPlaying.toggle() // Write the state.
+        }
+    }
+}
+```
